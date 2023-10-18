@@ -5,16 +5,83 @@ body {
     color: #434455;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6,p {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
 }
 
 ul,ol {
-    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
 }
 
 a {
     text-decoration: none;
+    margin: 0;
+}
+
+img {
+    display: block;
+}
+
+address {
+    font-style: normal;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.container {
+    /* max-width: 1158px; */
+    padding-left: 156px;
+    padding-right: 156px;
+    margin-left: 0;
+    margin-right:0;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 156px;
+}
+
+.nav-header {
+    display: flex;
+    gap: 76px;
+}
+
+.header-ul {
+    display: flex;
+    gap: 40px;
 }
 
 .a-studio {
@@ -30,10 +97,6 @@ a {
 
 .a-span {
     color: #2E2F42;
-}
-
-.body-address {
-    font-style: normal;
 }
 
 .nav-page {
@@ -68,7 +131,12 @@ a {
 
 .section-one {
     background: #2E2F42;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 188px;
+    padding-bottom: 188px;
 }
 
 .section-h-hero {
@@ -79,6 +147,8 @@ a {
     font-weight: 700;
     line-height: 1.07;
     letter-spacing: 1.12px;
+    width: 496px;
+    margin-bottom: 48px;
 }
 
 .section-button {
@@ -91,6 +161,10 @@ a {
     letter-spacing: 0.64px;
     background: #4D5AE5;
     cursor: pointer;
+    padding: 16px 32px;
+    border-radius: 4px;
+        background: #4D5AE5;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -109,6 +183,18 @@ a {
     line-height: 1.11;
     letter-spacing: 0.72px;
     text-transform: capitalize;
+    margin-bottom: 72px;
+}
+
+.section-two-ul {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.section-four-li {
+    border: 1px solid #E7E9FC;
+    background: #FFF;
 }
 
 .ul-h-tree {
@@ -127,12 +213,31 @@ a {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.32px;
+    width: 264px;
 }
 
 .section-tree {
     background: #F4F4FD;
 }
 
+.section-four-ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section-four-li:not(:nth-child(3n)) {
+    margin-right:24px ;
+}
+
+/* 
+-3+n 
+
+*/
+
+.section-four-li:nth-child(-n + 3) {
+    margin-bottom: 48px;
+}
 
 .h-tree-li {
     color:  #2E2F42;
@@ -142,10 +247,28 @@ a {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.4px;
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+
+.h-four-li {
+    color: #2E2F42;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+    margin-top: 32px;
+    margin-bottom: 8px;
+    margin-left: 16px;
 }
 
 .ul-li {
-    background-color: #FFFFFF;
+    border-radius: 0px 0px 4px 4px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    text-align: center;
 }
 
 .p-li {
@@ -154,6 +277,30 @@ a {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.32px;
+    margin-bottom: 32px;
+}
+
+.p-four-li {
+    color: #434455;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+    margin-bottom: 32px;
+    margin-left: 16px;
+}
+
+.footer-a-studio {
+    display: inline-block;
+    color: #4D5AE5;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0.54px;
+    text-transform: uppercase;   
+    margin-bottom: 16px;
 }
 
 .a-span-footer {
@@ -166,8 +313,11 @@ a {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.32px;
+    width: 264px;
 }
 
 .head-footer {
     background: #2E2F42;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
