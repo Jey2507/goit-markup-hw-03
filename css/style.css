@@ -61,22 +61,26 @@ address {
 }
 
 .container {
-    /* max-width: 1158px; */
+    width: 1158px;
     padding-left: 156px;
     padding-right: 156px;
-    margin-left: 0;
-    margin-right:0;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .page-header {
+    border-bottom: 1px solid #e7e9fc
+}
+
+.page-div {
     display: flex;
     justify-content: space-between;
-    padding: 24px 156px;
 }
 
 .nav-header {
     display: flex;
-    gap: 76px;
+    align-items: center;
+    padding: 24px 0;
 }
 
 .header-ul {
@@ -93,6 +97,7 @@ address {
     line-height: 1.17;
     letter-spacing: 0.54px;
     text-transform: uppercase;
+    margin-right: 76px;
 }
 
 .a-span {
@@ -107,6 +112,7 @@ address {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.32px;
+    padding: 24px 0;
 }
 
 .nav-page:hover,
@@ -131,16 +137,20 @@ address {
 
 .section-one {
     background: #2E2F42;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding-top: 188px;
     padding-bottom: 188px;
 }
 
+.hero-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+}
+
 .section-h-hero {
-    color:  #FFF;
+    max-width: 496px;
+    color:  #FFFFFF;
     font-family:'Roboto', sans-serif;
     font-size: 56px;
     font-style: normal;
@@ -149,10 +159,14 @@ address {
     letter-spacing: 1.12px;
     width: 496px;
     margin-bottom: 48px;
+    text-align: center;
 }
 
 .section-button {
-    color: #FFF;
+    min-width: 169px;
+    color: #FFFFFF;
+    height: 56px;
+    border: none;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -163,8 +177,8 @@ address {
     cursor: pointer;
     padding: 16px 32px;
     border-radius: 4px;
-        background: #4D5AE5;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    background: #4D5AE5;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -192,9 +206,17 @@ address {
     gap: 24px;
 }
 
+.section-two-li {
+    width: calc((100% - 72px) / 4);
+}
+
 .section-four-li {
-    border: 1px solid #E7E9FC;
+    width: calc((100% - 48px) / 3);
     background: #FFF;
+}
+
+.img-pers {
+    width: 100%;
 }
 
 .ul-h-tree {
@@ -205,6 +227,7 @@ address {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.4px;
+    margin-bottom: 8px;
 }
 
 .ul-p {
@@ -216,6 +239,16 @@ address {
     width: 264px;
 }
 
+.section-tree-divs {
+    padding: 32px 0;
+}
+
+.section-four-divs {
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+}
+
 .section-tree {
     background: #F4F4FD;
 }
@@ -224,19 +257,7 @@ address {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.section-four-li:not(:nth-child(3n)) {
-    margin-right:24px ;
-}
-
-/* 
--3+n 
-
-*/
-
-.section-four-li:nth-child(-n + 3) {
-    margin-bottom: 48px;
+    gap: 48px 24px;
 }
 
 .h-tree-li {
@@ -247,7 +268,6 @@ address {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.4px;
-    margin-top: 32px;
     margin-bottom: 8px;
 }
 
@@ -259,9 +279,7 @@ address {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.4px;
-    margin-top: 32px;
-    margin-bottom: 8px;
-    margin-left: 16px;
+    margin-bottom: 8px
 }
 
 .ul-li {
@@ -286,8 +304,6 @@ address {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.32px;
-    margin-bottom: 32px;
-    margin-left: 16px;
 }
 
 .footer-a-studio {
